@@ -1,0 +1,61 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectAmersham();
+ticketMa1.insert200p();
+ticketMa1.insert200p();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+
+Destination: Amersham
+Price: 300p
+Fri Oct 16 12:35:37 BST 2020
+# 300p
+##################
+
+ticketMa1.refundBalance()
+    returned int 100
+
+ticketMa1.selectAylesbury();
+ticketMa1.insert200p();
+ticketMa1.printTicket();
+You must insert at least: 20 more cents.
+
+ticketMa1.insert200p();
+ticketMa1.insert200p();
+ticketMa1.insert200p();
+ticketMa1.insert10p();
+ticketMa1.insert20p();
+ticketMa1.insert20p();
+ticketMa1.selectAmersham();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+
+Destination: Amersham
+Price: 300p
+Fri Oct 16 12:35:37 BST 2020
+# 300p
+##################
+
+ticketMa1.selectAylesbury();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+
+Destination: Aylesbury
+Price: 220p
+Fri Oct 16 12:35:37 BST 2020
+# 220p
+##################
+
+ticketMa1.selectHighWycombe();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+
+Destination: High Wycombe
+Price: 330p
+Fri Oct 16 12:35:37 BST 2020
+# 330p
+##################
+
