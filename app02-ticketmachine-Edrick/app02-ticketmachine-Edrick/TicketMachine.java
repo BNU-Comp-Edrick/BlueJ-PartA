@@ -31,9 +31,8 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
         
@@ -42,15 +41,7 @@ public class TicketMachine
         highWycombeTicket = new Ticket("High Wycombe", 330);
         issuedTicket = null;
     }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
-    {
-        return price;
-    }
-
+    
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -99,12 +90,13 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        int price = issuedTicket.getPrice();
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            System.out.println("# " + issuedTicket);
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
@@ -132,5 +124,36 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+    public void printAllTickets()
+    {
+        System.out.println("The three destinations below are available:");
+        
+        aylesburyTicket.print();
+        amershamTicket.print();
+        highWycombeTicket.print();
+        
+        System.out.println("Select your destination - ");
+    }
+        
+    public void insert20p()
+    {
+        balance = balance + 20;
+    }
+    
+    public void insert10p()
+    {
+        balance = balance + 10;
+    }
+    
+    public void insert100p()
+    {
+        balance = balance + 100;
+    }
+    
+    public void insert200p()
+    {
+        balance = balance + 200;
     }
 }
