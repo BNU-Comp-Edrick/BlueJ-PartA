@@ -6,6 +6,7 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * modified by Edrick Yapi (22014511)
  */
 public class Student
 {
@@ -16,14 +17,16 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     
+    private Course course;
     /**
-     * Create a new student with a given name and ID number.
+     * Create a new student with their fullname and their ID number.
      */
     public Student(String fullName, String studentID)
     {
         name = fullName;
         id = studentID;
         credits = 0;
+        
     }
 
     /**
@@ -43,7 +46,7 @@ public class Student
     }
 
     /**
-     * Return the student ID of this student.
+     * Return the student ID of the selected student.
      */
     public String getStudentID()
     {
@@ -60,7 +63,7 @@ public class Student
 
     
     /**
-     * Return the number of credit points this student has accumulated.
+     * Return the number of credit points this student has managed to gather.
      */
     public int getCredits()
     {
@@ -83,5 +86,10 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+    }
+    
+    public void enrollOnCourse(Course course)
+    {
+        this.course = course;
     }
 }
