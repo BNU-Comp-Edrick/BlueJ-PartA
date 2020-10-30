@@ -14,7 +14,6 @@ public class Module
     private int credit;
     
     private boolean completed;
-    private boolean passed;
 
     /**
      * Constructor for objects of class Module
@@ -26,10 +25,9 @@ public class Module
         this.codeNumber = codeNumber;
         
         mark = -1;
-        credit = 15;
+        credit = 0;
         
         completed = false;
-        passed = false;
     }
     
     public void awardMark(int mark)
@@ -49,7 +47,12 @@ public class Module
     
     public boolean isCompleted()
     {
-        return mark >= 0;
+        if(mark >= 40)
+        {
+            credit = 15;
+            return true;
+        }
+        return false;
     }
     
     public void print()

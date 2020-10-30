@@ -108,7 +108,8 @@ public class Course
     
     public boolean courseCompleted()
     {
-        if((module1.isCompleted()) && (module2.isCompleted()))
+        if((module1.isCompleted()) && (module2.isCompleted()) && (module3.isCompleted()) &&
+           (module4.isCompleted()))
         {
             return true;
         }
@@ -121,18 +122,20 @@ public class Course
     public void print()
     {
         System.out.println("Course " + codeNumber + " ~ " + title);
-        System.out.println("Module~");
-        module1.print();
-        module2.print();
-        module3.print();
-        module4.print();
+        
     }
     
     public void printModules()
     {
         if(courseCompleted())
         {
-            System.out.println("Final Marks = " + totalMark);
+            System.out.println("Modules:~ ");
+            module1.print();
+            module2.print();
+            module3.print();
+            module4.print();
+            
+            System.out.println("Final Marks:~ " + totalMark);
         }
     }
 }
