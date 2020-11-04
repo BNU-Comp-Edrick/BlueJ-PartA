@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.*;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -11,6 +11,8 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    
+    List <Product> listStock = new ArrayList<Product>();
 
     /**
      * Initialise the stock manager.
@@ -37,6 +39,7 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        //this method is for delivering the stock of the products
         Product product = findProduct(id);
         if(product != null)
         {
@@ -48,6 +51,39 @@ public class StockManager
             System.out.println("Product ID " + id + " was not found");
         }
         
+    }
+    
+    /**
+     * Replacing the name of the products
+     */
+    public void newProductName(int id, String newProduct)
+    {
+        // this method will be to change the name of a desired product
+        Product product = findProduct(id);
+        if(product != null)
+        {
+            product.changeName(newProduct);
+        }
+        else
+        {
+            System.out.println("This Product DOES NOT Exist");
+        }
+    }
+    
+    /**
+     * Removing product from stock list
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if(product !=null)
+        {
+            stock.remove(product);
+        }
+        else
+        {
+            System.out.println("This Product HAS NOT been found!!");
+        }
     }
     
     /**
@@ -63,6 +99,36 @@ public class StockManager
             product.sellOne();
             printDetails(id);
         }
+    }
+    
+     /**
+      *  Gathering the information about the items which
+      *  have a low stock level
+      */
+     public void printLowInStock()
+    {
+        listStock.clear();
+        
+        for (Product product : stock)
+        {
+            if (product.checkLow() == true)
+            {
+                listStock.add(product);
+            }
+        }
+        System.out.println("The Following Products Have Low Stock:~");
+        printListStock();
+    }
+    
+    /**
+     * printing listStock
+     */
+    public void printListStock()
+    {
+        listStock.forEach(product ->
+        {
+            System.out.println(product);
+        });
     }
     
     /**
@@ -90,6 +156,21 @@ public class StockManager
         for(Product product : stock)
         {
             if(product.getID() == id)
+            {
+                return product;
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Finding a product with part of the name
+     */
+    public Product findProduct(String product)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName() == name)
             {
                 return product;
             }
