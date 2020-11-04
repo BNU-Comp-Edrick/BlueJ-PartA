@@ -17,6 +17,7 @@ public class StockDemo
      */
     public StockDemo(StockManager manager)
     {
+       //this method adds the products 
        this.manager = manager;
         
        manager.addProduct(new Product(101, "Sony PlayStation 5"));
@@ -64,6 +65,7 @@ public class StockDemo
      */
     public Product getProduct(int id)
     {
+        // this method finds the product ID for each product
         Product product = manager.findProduct(id);
         
         if(product == null) 
