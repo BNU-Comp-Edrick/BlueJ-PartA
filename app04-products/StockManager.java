@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Edrick Yapi (22014511) 
+ * @version 04/11/2020
  */
 public class StockManager
 {
@@ -37,6 +37,47 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        Product product = findProduct(id);
+        if(product != null)
+        {
+            product.increaseQuantity(amount);
+            System.out.println("Product Delivered: " + product);
+        }
+        else
+        {
+            System.out.println("Product ID " + id + " was not found");
+        }
+        
+    }
+    
+    /**
+     * Method for selling an item of your choice
+     */
+        public void sellProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            printDetails(id);
+            product.sellOne();
+            printDetails(id);
+        }
+    }
+    
+    /**
+     * Show details of the given product. If the product is found,
+     * the name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
+     */
+    public void printDetails(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
     }
     
     /**
@@ -46,6 +87,13 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return product;
+            }
+        }
         return null;
     }
     
@@ -64,7 +112,11 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printAllProducts()
     {
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
     }
 }
