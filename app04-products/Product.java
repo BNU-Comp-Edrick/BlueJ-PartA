@@ -41,6 +41,14 @@ public class Product
     {
         return name;
     }
+    
+    /**
+     * Set a new name for the product
+     */
+    public void changeName(String newProductName)
+    {
+        name = newProductName;
+    }
 
     /**
      * @return The quantity in stock.
@@ -55,7 +63,7 @@ public class Product
      */
     public String toString()
     {
-        return id + ": " +  name + " stock level: " + quantity;
+        return id + ": " +  name + " | stock level: " + quantity;
     }
 
     /**
@@ -74,6 +82,33 @@ public class Product
         {
             System.out.println("Attempt to restock " + name +
                                " with a non-positive amount: " + amount);
+        }
+    }
+    
+    public boolean checkLow()
+    {
+        int low = 4;
+        
+        if(getQuantity() <= low)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Check if there is a product with a low stock level
+     * message will be printed if there is
+     */
+    public void getLow()
+    {
+        if(checkLow() == true)
+        {
+            System.out.println("This product has low amounts of stock: " + id + " " +
+            getQuantity());
         }
     }
 
