@@ -164,18 +164,19 @@ public class StockManager
     }
     
     /**
-     * Finding a product with part of the name
+     * Searching for a product by their name
      */
-    public Product findProduct(String product)
+    public void searchProductKeyword(String keyword)
     {
+        listStock.clear();
         for(Product product : stock)
         {
-            if(product.getName() == name)
+            if(product.getName().contains(keyword))
             {
-                return product;
+                listStock.add(product);
             }
         }
-        return null;
+        printListStock();
     }
     
     /**
