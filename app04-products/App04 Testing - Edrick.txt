@@ -1,0 +1,94 @@
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+
+
+m.printAllProducts();
+101: Sony PlayStation 5 | stock level: 0
+102: Xbox Series X | stock level: 0
+103: Xbox Series S | stock level: 0
+104: Apple iPhone 12 | stock level: 0
+105: Apple iPhone 12 Pro | stock level: 0
+106: Apple iPhone SE | stock level: 0
+107: Apple AirPods (2nd Generation) | stock level: 0
+108: Apple AirPods Pro | stock level: 0
+109: Samsung Galaxy Z Fold2 5G | stock level: 0
+110: Samsung Galaxy S20 5G | stock level: 0
+111: Samsung Galaxy Note20 5G | stock level: 0
+
+
+stockDem1.demo();
+101: Sony PlayStation 5 | stock level: 0
+102: Xbox Series X | stock level: 0
+103: Xbox Series S | stock level: 0
+104: Apple iPhone 12 | stock level: 0
+105: Apple iPhone 12 Pro | stock level: 0
+106: Apple iPhone SE | stock level: 0
+107: Apple AirPods (2nd Generation) | stock level: 0
+108: Apple AirPods Pro | stock level: 0
+109: Samsung Galaxy Z Fold2 5G | stock level: 0
+110: Samsung Galaxy S20 5G | stock level: 0
+111: Samsung Galaxy Note20 5G | stock level: 0
+Product Delivered: 101: Sony PlayStation 5 | stock level: 5
+Product Delivered: 102: Xbox Series X | stock level: 2
+Product Delivered: 103: Xbox Series S | stock level: 15
+Product Delivered: 104: Apple iPhone 12 | stock level: 64
+Product Delivered: 105: Apple iPhone 12 Pro | stock level: 32
+Product Delivered: 106: Apple iPhone SE | stock level: 8
+Product Delivered: 107: Apple AirPods (2nd Generation) | stock level: 19
+Product Delivered: 108: Apple AirPods Pro | stock level: 24
+Product Delivered: 109: Samsung Galaxy Z Fold2 5G | stock level: 4
+Product Delivered: 110: Samsung Galaxy S20 5G | stock level: 1
+Product Delivered: 111: Samsung Galaxy Note20 5G | stock level: 3
+101: Sony PlayStation 5 | stock level: 5
+102: Xbox Series X | stock level: 2
+103: Xbox Series S | stock level: 15
+104: Apple iPhone 12 | stock level: 64
+105: Apple iPhone 12 Pro | stock level: 32
+106: Apple iPhone SE | stock level: 8
+107: Apple AirPods (2nd Generation) | stock level: 19
+108: Apple AirPods Pro | stock level: 24
+109: Samsung Galaxy Z Fold2 5G | stock level: 4
+110: Samsung Galaxy S20 5G | stock level: 1
+111: Samsung Galaxy Note20 5G | stock level: 3
+
+
+m.newProductName(102, "PS4");
+m.printDetails(102);
+102: PS4 | stock level: 2
+
+
+m.sellProduct(102);
+102: PS4 | stock level: 2
+102: PS4 | stock level: 1
+
+
+m.removeProduct(105);
+m.printAllProducts();
+101: Sony PlayStation 5 | stock level: 5
+102: PS4 | stock level: 1
+103: Xbox Series S | stock level: 15
+104: Apple iPhone 12 | stock level: 64
+106: Apple iPhone SE | stock level: 8
+107: Apple AirPods (2nd Generation) | stock level: 19
+108: Apple AirPods Pro | stock level: 24
+109: Samsung Galaxy Z Fold2 5G | stock level: 4
+110: Samsung Galaxy S20 5G | stock level: 1
+111: Samsung Galaxy Note20 5G | stock level: 3
+
+
+m.printLowInStock();
+The Following Products Have Low Stock:~
+102: PS4 | stock level: 1
+109: Samsung Galaxy Z Fold2 5G | stock level: 4
+110: Samsung Galaxy S20 5G | stock level: 1
+111: Samsung Galaxy Note20 5G | stock level: 3
+
+
+m.searchProductKeyword("Galaxy");
+109: Samsung Galaxy Z Fold2 5G | stock level: 4
+110: Samsung Galaxy S20 5G | stock level: 1
+111: Samsung Galaxy Note20 5G | stock level: 3
+
+
+m.delivery(111, 5);
+Product Delivered: 111: Samsung Galaxy Note20 5G | stock level: 8
