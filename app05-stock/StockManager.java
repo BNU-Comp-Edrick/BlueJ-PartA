@@ -26,9 +26,19 @@ public class StockManager
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(Product item)
+    public boolean addProduct(Product item)
     {
-        stock.add(item);
+        if(findProduct(item.getID()) != null)
+        {
+            System.out.println("This product ID already exists!");
+            return false;
+        }
+        else
+        {
+            stock.add(item);
+            System.out.println("\n You have added " + item);
+            return true;
+        }
     }
     
     /**
@@ -89,14 +99,14 @@ public class StockManager
     /**
      * Method for selling an item of your choice
      */
-        public void sellProduct(int id)
+        public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
             printDetails(id);
-            product.sellOne();
+            product.sellOne(amount);
             printDetails(id);
         }
     }

@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -8,8 +9,12 @@
  */
 public class StockDemo
 {
+    public static final int FIRST_ID = 101;
+    public static final int LAST_ID = 110;
     // The stock manager.
     private StockManager manager;
+    
+    private Random generator;
 
     /**
      * Create a StockManager and populate it with a few
@@ -17,7 +22,7 @@ public class StockDemo
      */
     public StockDemo(StockManager manager)
     {
-       //this method adds the products 
+        //this method adds the products 
        this.manager = manager;
         
        manager.addProduct(new Product(101, "Sony PlayStation 5"));
@@ -30,7 +35,6 @@ public class StockDemo
        manager.addProduct(new Product(108, "Apple AirPods Pro"));
        manager.addProduct(new Product(109, "Samsung Galaxy Z Fold2 5G"));
        manager.addProduct(new Product(110, "Samsung Galaxy S20 5G"));
-       manager.addProduct(new Product(111, "Samsung Galaxy Note20 5G"));
     }
     
    /**
@@ -53,8 +57,28 @@ public class StockDemo
         manager.delivery(108, 24);
         manager.delivery(109, 4);
         manager.delivery(110, 1);
-        manager.delivery(111, 3);
         manager.printAllProducts();
+    }
+    
+    /**
+     * Method to search for a product by name
+     */
+    public void search(String keyword)
+    {
+        int id = FIRST_ID;
+        
+        while(id <= LAST_ID)
+        {
+            Product product = manager.findProduct(id);
+            String name = product.getName().toLowerCase();
+            keyword = keyword.toLowerCase();
+            
+            if(name.contains(keyword))
+            {
+                System.out.println(product);
+            }
+            id++;
+        }
     }
 
     /**
