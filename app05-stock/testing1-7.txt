@@ -1,0 +1,180 @@
+    VM terminated.
+Program.main();
+
+ You have added 101: Sony PlayStation 5 | stock level: 0
+
+ You have added 102: Xbox Series X | stock level: 0
+
+ You have added 103: Xbox Series S | stock level: 0
+
+ You have added 104: Apple iPhone 12 | stock level: 0
+
+ You have added 105: Apple iPhone 12 Pro | stock level: 0
+
+ You have added 106: Apple iPhone SE | stock level: 0
+
+ You have added 107: Apple AirPods (2nd Generation) | stock level: 0
+
+ You have added 108: Apple AirPods Pro | stock level: 0
+
+ You have added 109: Samsung Galaxy Z Fold2 5G | stock level: 0
+
+ You have added 110: Samsung Galaxy S20 5G | stock level: 0
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 111
+Please enter the name of the product
+> Samsung Galaxy S10
+
+ You have added 111: Samsung Galaxy S10 | stock level: 0
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 112
+Please enter the name of the product
+> gopro
+
+ You have added 112: gopro | stock level: 0
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 113
+Please enter the name of the product
+> Nintendo Switch
+
+ You have added 113: Nintendo Switch | stock level: 0
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 114
+Please enter the name of the product
+> gaming pc
+
+ You have added 114: gaming pc | stock level: 0
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 115
+Please enter the name of the product
+> Motorolla G9 Plus
+
+ You have added 115: Motorolla G9 Plus | stock level: 0
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> add
+Adding new product
+
+Please enter the product ID
+> 103
+Please enter the name of the product
+> new product
+This product ID already exists!
+
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> 

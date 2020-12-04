@@ -1,0 +1,175 @@
+105: Apple iPhone 12 Pro | stock level: 0
+106: Apple iPhone SE | stock level: 0
+107: Apple AirPods (2nd Generation) | stock level: 0
+108: Apple AirPods Pro | stock level: 0
+109: Samsung Galaxy Z Fold2 5G | stock level: 0
+110: Samsung Galaxy S20 5G | stock level: 0
+111: Samsung Galaxy S10 | stock level: 0
+112: gopro | stock level: 0
+114: gaming pc | stock level: 0
+115: Motorolla G9 Plus | stock level: 0
+> deliver
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> deliver
+Delivery of a product
+
+Please enter the product ID
+
+> 112
+Please enter the amount you wish to have delivered
+
+> 8
+Product Delivered: 112: gopro | stock level: 8
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> deliver
+Delivery of a product
+
+Please enter the product ID
+
+> 112
+Please enter the amount you wish to have delivered
+
+> -4
+Attempt to restock gopro with a non-positive amount: -4
+Product Delivered: 112: gopro | stock level: 8
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> sell
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the product ID
+> 2
+112: gopro | stock level: 8
+2 gopro have been sold
+112: gopro | stock level: 6
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> sell
+Sell a product
+
+Please enter the product ID
+> 112
+Please enter the product ID
+> -2
+112: gopro | stock level: 6
+Unable to sell a negative amount
+
+112: gopro | stock level: 6
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> search
+Searching for product(s) by name...
+
+Please enter the name of the product(s)
+
+> samsung
+109: Samsung Galaxy Z Fold2 5G | stock level: 0
+110: Samsung Galaxy S20 5G | stock level: 0
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> low stock
+The Following Products Have Low Stock:~
+101: Sony PlayStation 5 | stock level: 0
+102: Xbox Series X | stock level: 0
+103: Xbox Series S | stock level: 0
+104: Apple iPhone 12 | stock level: 0
+105: Apple iPhone 12 Pro | stock level: 0
+106: Apple iPhone SE | stock level: 0
+107: Apple AirPods (2nd Generation) | stock level: 0
+108: Apple AirPods Pro | stock level: 0
+109: Samsung Galaxy Z Fold2 5G | stock level: 0
+110: Samsung Galaxy S20 5G | stock level: 0
+111: Samsung Galaxy S10 | stock level: 0
+114: gaming pc | stock level: 0
+115: Motorolla G9 Plus | stock level: 0
+******************************
+ Stock Management Application 
+      App05: by Edrick
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Search:     Search for a product
+    Sell:       Sell a product
+    Deliver:    Order a delivery of products
+    Low Stock:  List of products that are low in stock
+    Quit:       Quit the program
+
+> quit
